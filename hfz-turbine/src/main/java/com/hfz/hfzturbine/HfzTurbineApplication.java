@@ -6,6 +6,7 @@ import org.springframework.cloud.netflix.turbine.EnableTurbine;
 
 @SpringBootApplication
 @EnableTurbine
+
 public class HfzTurbineApplication {
 
 	public static void main(String[] args) {
