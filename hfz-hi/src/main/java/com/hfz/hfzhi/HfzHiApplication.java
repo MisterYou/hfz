@@ -35,4 +35,12 @@ public class HfzHiApplication {
 		return "hi,"+name+",sorry,error!";
 	}
 
+
+	@Value("${foo}")
+	String foo;
+	@RequestMapping(value = "/hi")
+	public String hi(){
+		return foo;
+	}
+
 }

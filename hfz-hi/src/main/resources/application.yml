@@ -12,3 +12,19 @@ spring:
   sleuth:
     sampler:
       percentage: 1.0
+  cloud:
+    config:
+      label: master   #指明远程仓库的分支
+      profile: dev    #开发环境配置文件
+      discovery:
+        enabled: true
+        service-id:  config-server
+
+
+#http请求地址和资源文件映射如下:
+
+ #/{application}/{profile}[/{label}]
+ #/{application}-{profile}.yml
+ # /{label}/{application}-{profile}.yml
+ #/{application}-{profile}.properties
+ #/{label}/{application}-{profile}.properties
