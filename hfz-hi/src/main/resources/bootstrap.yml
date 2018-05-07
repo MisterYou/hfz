@@ -1,0 +1,20 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://www.youjiniot.com/eureka/
+
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      uri: http://39.108.158.254:8888/
+      label: master
+      profile: dev
+      name: hfz_test
+server:
+  port: 8763
+
+
+
+#      uri: http://39.108.158.254:8888/

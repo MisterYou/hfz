@@ -5,11 +5,16 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/forezp/SpringcloudConfig/
-          search-paths: respo
-          username:
-          password:
+          uri: https://gitee.com/ZhongWanYuXi/hfz-config
+          search-paths: release
+          username: ZhongWanYuXi
+          password: 940707you
       label: master
+  rabbitmq:
+    host: 120.79.138.57
+    port: 5672
+    username: admin
+    password: 940707you
 
 server:
   port: 8888
@@ -17,4 +22,9 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://www.youjiniot.com/eureka/
+
+management:
+  security:
+    enabled: false
+

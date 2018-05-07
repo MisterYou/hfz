@@ -1,7 +1,7 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://www.youjiniot.com/eureka/
 server:
   port: 8764
 spring:
@@ -11,4 +11,4 @@ spring:
     sampler:
       percentage: 1.0
   zipkin:
-    base-url: http://localhost:9411
+    base-url: http://120.79.138.57:9411

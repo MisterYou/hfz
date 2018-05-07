@@ -1,11 +1,30 @@
 server:
   port: 8761
 
+spring:
+  application:
+    name: comaberenices
+
+
 eureka:
   instance:
-    hostname: localhost
+    hostname: www.youjiniot.com
+    lease-expiration-duration-in-seconds: 10
+    lease-renewal-interval-in-seconds: 3
+
   client:
-    registerWithEureka: false  #表示是一个server
+    registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://${eureka.instance.hostname}/eureka/
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 3000
+
+
+#   cloud:
+#       config:
+#         uri: http://config:8888
+#         fail-fast: true
+#         password: 940707you
+#         username: root
