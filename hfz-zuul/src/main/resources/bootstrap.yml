@@ -3,12 +3,18 @@ eureka:
     serviceUrl:
       defaultZone: http://www.youjiniot.com/eureka/
   instance:
-    ip-address: 39.108.158.254
+    ip-address: 120.77.215.210
     prefer-ip-address: true
-
+server:
+  port: 8769
 spring:
   application:
-    name: server-hi
+    name: service-zuul
+  sleuth:
+    sampler:
+      percentage: 1.0
+  zipkin:
+    base-url: http://120.79.138.57:9411
   cloud:
     config:
       discovery:
@@ -16,10 +22,8 @@ spring:
         service-id: CONFIG-SERVER
       label: master
       profile: dev
-      name: hfz_test
-server:
-  port: 8763
+      name: hfz-zuul
+ribbon:
+   ReadTimeout: 60000
+   ConnectTimeout: 60000
 
-
-
-#      uri: http://39.108.158.254:8888/

@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: service-turbine
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG-SERVER
+      label: master
+      profile: dev
+      name: hfz-turbine
+server:
+  port: 8771
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://www.youjiniot.com/eureka/
+  instance:
+    ip-address: 120.77.215.210
+    prefer-ip-address: true

@@ -3,12 +3,16 @@ eureka:
     serviceUrl:
       defaultZone: http://www.youjiniot.com/eureka/
   instance:
-    ip-address: 39.108.158.254
+    ip-address: 120.79.138.57
     prefer-ip-address: true
-
+server:
+  port: 8764
 spring:
   application:
-    name: server-hi
+    name: service-ribbon
+  sleuth:
+    sampler:
+      percentage: 1.0
   cloud:
     config:
       discovery:
@@ -16,10 +20,4 @@ spring:
         service-id: CONFIG-SERVER
       label: master
       profile: dev
-      name: hfz_test
-server:
-  port: 8763
-
-
-
-#      uri: http://39.108.158.254:8888/
+      name: hfz-ribbon
