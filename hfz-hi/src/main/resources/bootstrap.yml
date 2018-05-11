@@ -2,9 +2,10 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://hfz:youjin666@www.youjiniot.com/eureka/
-#  instance:
-#    ip-address: 39.108.158.254
-#    prefer-ip-address: true
+  instance:
+    ip-address: localhost
+    prefer-ip-address: true
+#39.108.158.254
 
 spring:
   application:
@@ -17,9 +18,11 @@ spring:
       label: master
       profile: dev
       name: hfz_test
+      username: config
+      password: houfazuo123
+#      uri: http://config:houfazuo123@localhost:8888
 server:
   port: 8763
-
 
 
 #      uri: http://39.108.158.254:8888/

@@ -23,9 +23,11 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://hfz:youjin666@www.youjiniot.com/eureka/
-#  instance:
-#    ip-address: 39.108.158.254
-#    prefer-ip-address: true
+  instance:
+    ip-address: 39.108.158.254
+    prefer-ip-address: true
+
+#39.108.158.254
 security:
   basic:
     enabled: true
