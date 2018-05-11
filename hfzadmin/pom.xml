@@ -73,6 +73,9 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<finalName>
+			hfz-admin
+		</finalName>
 	</build>
 
 	<repositories>

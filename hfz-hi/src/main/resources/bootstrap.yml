@@ -1,10 +1,10 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://www.youjiniot.com/eureka/
-  instance:
-    ip-address: 39.108.158.254
-    prefer-ip-address: true
+      defaultZone: http://hfz:youjin666@www.youjiniot.com/eureka/
+#  instance:
+#    ip-address: 39.108.158.254
+#    prefer-ip-address: true
 
 spring:
   application:

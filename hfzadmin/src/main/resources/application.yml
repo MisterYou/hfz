@@ -9,8 +9,11 @@ eureka:
   client:
     registryFetchIntervalSeconds: 5
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://hfz:youjin666@www.youjiniot.com/eureka/
 management:
   security:
     enabled: false
+
+info:
+  version: @project.version@
 
