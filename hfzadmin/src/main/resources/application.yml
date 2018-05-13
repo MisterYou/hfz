@@ -6,6 +6,8 @@ spring:
 eureka:
   instance:
     leaseRenewalIntervalInSeconds: 10
+    ip-address: 120.79.138.57
+    prefer-ip-address: true
   client:
     registryFetchIntervalSeconds: 5
     serviceUrl:

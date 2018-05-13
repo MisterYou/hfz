@@ -1,7 +1,7 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://www.youjiniot.com/eureka/
+      defaultZone: http://hfz:youjin666@www.youjiniot.com/eureka/
   instance:
     ip-address: 120.79.138.57
     prefer-ip-address: true
@@ -21,3 +21,5 @@ spring:
       label: master
       profile: dev
       name: hfz-ribbon
+      username: config
+      password: houfazuo123

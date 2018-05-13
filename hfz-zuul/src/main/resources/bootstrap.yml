@@ -1,7 +1,7 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://www.youjiniot.com/eureka/
+      defaultZone: http://hfz:youjin666@www.youjiniot.com/eureka/
   instance:
     ip-address: 120.77.215.210
     prefer-ip-address: true
@@ -23,6 +23,8 @@ spring:
       label: master
       profile: dev
       name: hfz-zuul
+      username: config
+      password: houfazuo123
 ribbon:
    ReadTimeout: 60000
    ConnectTimeout: 60000
