@@ -1,0 +1,24 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://hfz:youjin666@www.youjiniot.com/eureka/
+  instance:
+    ip-address: 120.77.215.210
+    prefer-ip-address: true
+
+spring:
+  application:
+    name: system
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG-SERVER
+      label: master
+      profile: dev
+      name: system
+      username: config
+      password: houfazuo123
+#      uri: http://config:houfazuo123@localhost:8888
+server:
+  port: 8100
