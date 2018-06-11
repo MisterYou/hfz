@@ -1,0 +1,25 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://hfz:youjin666@www.youjiniot.com/eureka/
+  instance:
+    ip-address: 120.77.215.210
+    prefer-ip-address: true
+spring:
+  application:
+    name: uaa-service
+  sleuth:
+    sampler:
+      percentage: 1.0
+  zipkin:
+    base-url: http://120.79.138.57:9411
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG-SERVER
+      label: master
+      profile: dev
+      name: uaa-service
+      username: config
+      password: houfazuo123
