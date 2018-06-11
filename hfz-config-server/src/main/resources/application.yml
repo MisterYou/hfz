@@ -10,6 +10,7 @@ spring:
           username: ZhongWanYuXi
           password: 940707you
       label: master
+      fail-fast: true
   rabbitmq:
     host: 120.79.138.57
     port: 5672
