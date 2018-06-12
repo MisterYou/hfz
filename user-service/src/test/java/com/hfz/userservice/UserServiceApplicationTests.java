@@ -1,4 +1,4 @@
-package comhfz.uaaservice;
+package com.hfz.userservice;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class UaaServiceApplicationTests {
+public class UserServiceApplicationTests {
 
 	@Test
 	public void contextLoads() {
