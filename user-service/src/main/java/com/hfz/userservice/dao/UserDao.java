@@ -10,6 +10,11 @@ import org.apache.ibatis.annotations.Select;
 
 public interface UserDao{
 
+	/**
+	 * 根据用户名查询用户相关
+	 * @param username
+	 * @return
+	 */
 	@Select("SELECT " +
 			"id as id, " +
 			"username as username, " +
@@ -26,6 +31,12 @@ public interface UserDao{
 			"FROM " +
 			"sys_user where username = #{username}")
 	User findByUsername(String username);
+
+
+	/**
+	 * 保存
+	 * @param user
+	 */
 
 	@Insert("INSERT INTO sys_user(" +
 			"username," +

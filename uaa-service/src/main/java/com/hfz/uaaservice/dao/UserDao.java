@@ -2,6 +2,7 @@ package com.hfz.uaaservice.dao;
 
 
 import com.hfz.uaaservice.entity.User;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 /**
@@ -9,6 +10,12 @@ import org.apache.ibatis.annotations.Select;
  */
 
 public interface UserDao  {
+
+	/**
+	 * 根据用户名查询用户信息
+	 * @param username
+	 * @return
+	 */
 	@Select("SELECT " +
 			"id as id, " +
 			"username as username, " +
@@ -23,5 +30,5 @@ public interface UserDao  {
 			"update_date as updateDate   " +
 			"FROM " +
 			"sys_user where username = #{username}")
-	User findByUsername(String username);
+	User findByUsername(@Param("username") String username);
 }
