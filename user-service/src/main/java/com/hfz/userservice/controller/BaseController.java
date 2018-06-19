@@ -6,4 +6,5 @@ package com.hfz.userservice.controller;
  * @date 2018-06-12-19:29
  */
 public class BaseController {
+
 }
