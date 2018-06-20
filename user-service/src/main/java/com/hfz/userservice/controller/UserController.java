@@ -4,6 +4,7 @@ import com.hfz.userservice.annotation.SysLogger;
 import com.hfz.userservice.dto.RespDTO;
 import com.hfz.userservice.service.UserService;
 import com.hfz.userservice.util.BPwdEncoderUtils;
+import com.hfz.userservice.vo.entity.Result;
 import com.hfz.userservice.vo.entity.User;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,30 +25,28 @@ public class UserController extends BaseController{
     @ApiOperation(value = "注册", notes = "username和password为必选项")
     @PostMapping("/registry")
     @SysLogger("registry")
-    public void createUser(@RequestBody User user){
+    public Result createUser(@RequestBody User user){
         //参数判读省略,判读该用户在数据库是否已经存在省略
-        String entryPassword= BPwdEncoderUtils.BCryptPassword(user.getPassword());
-        user.setPassword(entryPassword);
-        userService.createUser(user);
+        return userService.createUser(user);
     }
 
     @ApiOperation(value = "登录", notes = "username和password为必选项")
     @PostMapping("/login")
     @SysLogger("login")
-    public RespDTO login(@RequestParam String username , @RequestParam String password){
+    public Result login(@RequestBody User user){
         //参数判读省略
-        return   userService.login(username,password);
+        return userService.login(user);
     }
 
     @ApiOperation(value = "根据用户名获取用户", notes = "根据用户名获取用户")
-    @PostMapping("/{username}")
+    @PostMapping("/getuserbyname")
     @PreAuthorize("hasRole('USER')")
     @SysLogger("getUserInfo")
     // @PreAuthorize("hasAnyAuthority('ROLE_USER')")
-    public RespDTO getUserInfo(@PathVariable("username") String username){
+    public Result getUserInfo(@RequestBody User user){
         //参数判读省略
-        User user=  userService.getUserInfo(username);
-        return RespDTO.onSuc(user);
+
+        return userService.getUserInfo(user.getUsername());
     }
 
 

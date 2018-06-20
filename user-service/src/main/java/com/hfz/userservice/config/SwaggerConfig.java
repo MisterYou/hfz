@@ -19,11 +19,7 @@ import java.util.List;
 
 
 /**
- * Created by chen on 2018/4/19.
- * <p>
- * Email 122741482@qq.com
- * <p>
- * Describe:
+ * Created by youjin on 2018/6/19.
  */
 @Configuration
 @EnableSwagger2

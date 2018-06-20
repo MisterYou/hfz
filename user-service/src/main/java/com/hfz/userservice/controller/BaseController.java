@@ -7,4 +7,19 @@ package com.hfz.userservice.controller;
  */
 public class BaseController {
 
+    public String getCurrentUserCode(){
+
+        return "";
+    }
+
+    public String getCurrentUserName(){
+
+        return "";
+    }
+
+    public String getCurrentUserDepartCode() {
+
+        return null;
+    }
+
 }

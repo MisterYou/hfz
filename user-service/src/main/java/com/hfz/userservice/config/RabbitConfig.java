@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * Created by youjin on 2018/7/12.
+ * Created by youjin on 2018/6/12.
  */
 @Configuration
 public class RabbitConfig {

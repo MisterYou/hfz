@@ -31,7 +31,7 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory()
-                .withClient("user-service")
+                .withClient("uaa-service")
                 .secret("95271314")
                 .scopes("service")
                 .autoApprove(true)

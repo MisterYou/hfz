@@ -1,6 +1,7 @@
-package com.hfz.uaaservice.dao;
+package com.hfz.userservice.dao;
 
-import com.hfz.uaaservice.entity.Role;
+import com.hfz.userservice.vo.entity.Role;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
@@ -9,9 +10,24 @@ import java.util.List;
 /**
  * @author youjin
  * @Description:
- * @date 2018-06-19-9:21
+ * @date 2018-06-20-16:14
  */
 public interface RoleDao {
+
+    @Insert("INSERT INTO sys_role( " +
+            "role_name, " +
+            "role_sign, " +
+            "remark, " +
+            "user_id_create, " +
+            "create_date, " +
+            "update_date ) VALUES ( " +
+            "#{roleName,jdbcType=VARCHAR}, " +
+            "#{roleSign,jdbcType=VARCHAR}, " +
+            "#{remark,jdbcType=VARCHAR}, " +
+            "#{userIdCreate,jdbcType=BIGINT}, " +
+            "#{createDate,jdbcType=TIMESTAMP}, " +
+            "#{updateDate,jdbcType=TIMESTAMP})")
+    void save(Role role);
 
     @Select("SELECT " +
             "sr.id as id, " +

@@ -16,7 +16,11 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 @Configuration
 @EnableResourceServer
 public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter {
+
     Logger log = LoggerFactory.getLogger(ResourceServerConfiguration.class);
+
+    @Autowired
+    TokenStore tokenStore;
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
@@ -35,6 +39,4 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
         resources.resourceId("user-service").tokenStore(tokenStore);
     }
 
-    @Autowired
-    TokenStore tokenStore;
 }
