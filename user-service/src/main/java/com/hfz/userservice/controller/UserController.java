@@ -40,8 +40,8 @@ public class UserController extends BaseController{
 
     @ApiOperation(value = "根据用户名获取用户", notes = "根据用户名获取用户")
     @PostMapping("/getuserbyname")
-    @PreAuthorize("hasRole('USER')")
-    @SysLogger("getUserInfo")
+    @PreAuthorize("hasAnyAuthority('ADMIN')")
+    @SysLogger("getUserByName")
     // @PreAuthorize("hasAnyAuthority('ROLE_USER')")
     public Result getUserInfo(@RequestBody User user){
         //参数判读省略
