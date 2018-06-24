@@ -1,4 +1,4 @@
-package com.hfz.userservice.config;
+package com.hfz.certificate.config;
 
 
 import org.springframework.context.annotation.Bean;
@@ -54,8 +54,8 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title(" user-service api ")
-                .description("user-service 微服务")
+                .title(" certificate-service api ")
+                .description("certificate-service 微服务")
                 .termsOfServiceUrl("")
                 .contact("hfz")
                 .version("1.0")
